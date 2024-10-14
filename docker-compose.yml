@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+  backend-test:
+    container_name: backend-test
+    image: elouteiro/backend-test:latest
+    ports:
+      - 6868:3000
+    logging:
+      driver: 'json-file'
+      options:
+        max-size: '10m'
+    command: ['sh', '-c', 'node /app/dist/src/main']
+    restart: always

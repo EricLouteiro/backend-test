@@ -6,6 +6,11 @@ export interface UserModel {
   phone: string;
 }
 
+export interface UserResponse {
+  users: UserModel[];
+  count: number;
+}
+
 export interface UserEntity {
   getFakeUsers: (userQty: number) => UserModel[];
 }
