@@ -10,5 +10,5 @@ services:
       driver: 'json-file'
       options:
         max-size: '10m'
-    command: ['sh', '-c', 'node /app/dist/src/main']
+    # command: ['sh', '-c', 'node /app/dist/src/main']
     restart: always

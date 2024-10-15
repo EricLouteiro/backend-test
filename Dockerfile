@@ -25,6 +25,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install runtime dependecies (without dev/test dependecies)
+RUN yarn install --production
 
 # Copy production build
 COPY --from=development /app/dist/ ./dist/
