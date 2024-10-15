@@ -1,5 +1,5 @@
 # Building layer
-FROM node:18-alpine as development
+FROM node:lts-alpine as development
 WORKDIR /app
 
 # Copy configuration files
@@ -17,7 +17,7 @@ COPY src/ src/
 RUN yarn build
 
 # Runtime (production) layer
-FROM nginx:1.20-alpine as production
+FROM node:lts-alpine as production
 
 WORKDIR /app
 
