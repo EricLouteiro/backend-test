@@ -1,5 +1,5 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsNumberString, IsOptional } from 'class-validator';
+import { IsNumberString, IsOptional, IsString } from 'class-validator';
 
 export class QueryUser {
   @IsOptional()
@@ -7,5 +7,12 @@ export class QueryUser {
   @ApiProperty({
     description: 'Query param to limit response. Default limit is 10',
   })
+  
   count?: string;
+  @IsOptional()
+  @IsString()
+  @ApiProperty({
+    description: 'Query param to limit response. Default limit is 10',
+  })
+  search?: string
 }
