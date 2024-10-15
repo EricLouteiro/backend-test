@@ -51,7 +51,7 @@ Command: docker compose up -d
 
 # Endpoints:
 
-## /api/users
+## /api/user
 
 ### Method: GET
 
